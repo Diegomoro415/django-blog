@@ -29,7 +29,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['ci-blog-walkthrough.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['ci-blog-walkthrough.herokuapp.com',
+                 'localhost',
+                '8000-diegomoro415-djangoblog-rqh9duw2u62.ws-eu97.gitpod.io']
 
 
 # Application definition
@@ -48,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'django_summernote',
+    'crispy_forms',
     'my_blog_app',
 ]
 
@@ -55,6 +58,7 @@ SITE_ID = 1
 
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
